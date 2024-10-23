@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me </title>
+    
+    <style>
+        body {
+            text-align: center;
+            margin-top: 200px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        #yes-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #yes-button:hover {
+            background-color: #45a049;
+        }
+
+        #no-button {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            transition: transform 1s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            var noButton = document.getElementById("no-button");
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var newLeft = Math.floor(Math.random() * (screenWidth - 100));
+            var newTop = Math.floor(Math.random() * (screenHeight - 100));
+            noButton.style.left = newLeft + "px";
+            noButton.style.top = newTop + "px";
+        }
+    </script>
+</head>
+<body>
+    <h1>Will You Meet Me Tomorrow?</h1>
+    <button id="yes-button" onclick="alert('Great! Let\'s meet!')">Yes</button>
+    <button id="no-button" onclick="moveNoButton()">No</button>
+</body>
+</html>
+</body>
+</html>
